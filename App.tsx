@@ -3,15 +3,12 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import {LandingScreen} from './src/screens/landingScreen/LandingScreen';
 
 export const App = () => {
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <LandingScreen />
-    </SafeAreaView>
-  );
+  return <LandingScreen />;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: 'black',
   },
 });
