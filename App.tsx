@@ -1,14 +1,18 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import {LandingScreen} from './src/screens/landingScreen/LandingScreen';
 
 export const App = () => {
-  return <LandingScreen />;
+  return (
+    <View style={styles.safeArea}>
+      <StatusBar barStyle="light-content" />
+      <LandingScreen />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: 'black',
   },
 });
