@@ -7,10 +7,12 @@ import {
   Text,
   View,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
 export const LandingScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -27,10 +29,14 @@ export const LandingScreen = () => {
       </View>
 
       <View style={styles.buttonsContainer}>
-        <Pressable style={styles.loginBtn}>
+        <Pressable
+          style={styles.loginBtn}
+          onPress={() => navigation.navigate('Login')}>
           <Text style={styles.loginText}>Log in</Text>
         </Pressable>
-        <Pressable style={styles.signupBtn}>
+        <Pressable
+          style={styles.signupBtn}
+          onPress={() => navigation.navigate('Signup')}>
           <Text style={styles.signupText}>Sign up</Text>
         </Pressable>
         <Pressable
