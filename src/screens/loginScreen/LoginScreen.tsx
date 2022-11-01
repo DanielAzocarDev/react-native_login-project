@@ -1,3 +1,4 @@
+import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
 import {
   Image,
@@ -8,8 +9,11 @@ import {
   View,
 } from 'react-native';
 import {Layout} from '../../components/layout/Layout';
+import {RootStackParams} from '../../navigation/Navigation';
 
-export const LoginScreen = ({router, navigation}) => {
+interface Props extends StackScreenProps<RootStackParams, 'Login'> {}
+
+export const LoginScreen = ({navigation}: Props) => {
   return (
     <Layout>
       <View>

@@ -5,6 +5,12 @@ import {LandingScreen} from '../screens/landingScreen/LandingScreen';
 import {LoginScreen} from '../screens/loginScreen/LoginScreen';
 import {SignupScreen} from '../screens/signupScreen/SignupScreen';
 
+export type RootStackParams = {
+  Home: undefined;
+  Login: undefined;
+  Signuo: undefined;
+};
+
 const Stack = createStackNavigator();
 
 export const Navigation = () => {
