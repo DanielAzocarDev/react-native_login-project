@@ -8,7 +8,7 @@ import {SignupScreen} from '../screens/signupScreen/SignupScreen';
 export type RootStackParams = {
   Home: undefined;
   Login: undefined;
-  Signuo: undefined;
+  Signup: undefined;
 };
 
 const Stack = createStackNavigator();
