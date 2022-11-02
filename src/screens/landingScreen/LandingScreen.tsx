@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {theme} from '../../theme/AppTheme';
 
 const screenWidth = Dimensions.get('screen').width;
 const screenHeight = Dimensions.get('screen').height;
@@ -21,9 +22,9 @@ export const LandingScreen = () => {
           resizeMode="cover"
           style={styles.backgroundImage}>
           <View>
-            <Text style={styles.subtitle}>it is time to</Text>
-            <Text style={styles.title}>To be part of</Text>
-            <Text style={styles.text}>something greater</Text>
+            <Text style={[theme.text, styles.subtitle]}>it is time to</Text>
+            <Text style={[theme.text, styles.title]}>To be part of</Text>
+            <Text style={[theme.text, styles.text]}>something greater</Text>
           </View>
         </ImageBackground>
       </View>
@@ -62,20 +63,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    color: 'white',
     textAlign: 'center',
     fontSize: 42,
     fontWeight: 'bold',
     letterSpacing: 2,
   },
   subtitle: {
-    color: 'white',
     textAlign: 'center',
     textTransform: 'uppercase',
     fontSize: 10,
   },
   text: {
-    color: 'white',
     textAlign: 'center',
     fontSize: 12,
     marginTop: 12,

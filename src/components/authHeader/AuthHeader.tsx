@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {theme} from '../../theme/AppTheme';
 
 interface Props {
   title: string;
@@ -10,9 +11,9 @@ export const AuthHeader = ({action, title}: Props) => {
   return (
     <View style={styles.headerContainer}>
       <Pressable style={styles.goBack} onPress={action}>
-        <Text style={[styles.text]}>{'<'}</Text>
+        <Text style={[theme.text]}>{'<'}</Text>
       </Pressable>
-      <Text style={[styles.text, styles.title]}>{title}</Text>
+      <Text style={[theme.text, styles.title]}>{title}</Text>
     </View>
   );
 };
@@ -22,9 +23,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 70,
-  },
-  text: {
-    color: 'white',
   },
   goBack: {
     alignItems: 'center',

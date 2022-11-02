@@ -14,6 +14,7 @@ import {Layout} from '../../components/layout/Layout';
 import {LoginWithButton} from '../../components/loginWithButton/LoginWithButton';
 import {LoginWithSection} from '../../components/loginWithSection/LoginWithSection';
 import {RootStackParams} from '../../navigation/Navigation';
+import {theme} from '../../theme/AppTheme';
 
 interface Props extends StackScreenProps<RootStackParams, 'Login'> {}
 
@@ -71,7 +72,7 @@ export const LoginScreen = ({navigation}: Props) => {
           </Pressable>
 
           <Pressable style={styles.signupBtn}>
-            <Text style={[styles.text, styles.signupText]}>
+            <Text style={[theme.text, styles.signupText]}>
               Don't have an account?{' '}
               <Text style={styles.signupTextBold}>Sign up</Text>
             </Text>
@@ -83,9 +84,6 @@ export const LoginScreen = ({navigation}: Props) => {
 };
 
 const styles = StyleSheet.create({
-  text: {
-    color: 'white',
-  },
   goBack: {
     alignItems: 'center',
     justifyContent: 'center',
