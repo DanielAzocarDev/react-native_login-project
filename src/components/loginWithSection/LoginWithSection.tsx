@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {theme} from '../../theme/AppTheme';
 
 interface Prop {
   text: string;
@@ -11,7 +12,7 @@ export const LoginWithSection = ({text, children}: Prop) => {
       style={{
         marginBottom: 70,
       }}>
-      <Text style={[styles.text, {marginBottom: 15}]}>{text}</Text>
+      <Text style={[theme.text, {marginBottom: 15}]}>{text}</Text>
 
       <View style={styles.loginWithContainer}>{children}</View>
     </View>
